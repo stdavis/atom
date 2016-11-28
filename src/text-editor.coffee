@@ -1519,6 +1519,8 @@ class TextEditor extends Model
   # checkpoint will be lost. If the given checkpoint is no longer present in the
   # undo history, no changes will be made to the buffer and this method will
   # return `false`.
+  # 
+  # * `checkpoint` A checkpoint value.
   #
   # Returns a {Boolean} indicating whether the operation succeeded.
   revertToCheckpoint: (checkpoint) -> @buffer.revertToCheckpoint(checkpoint)
@@ -1528,6 +1530,8 @@ class TextEditor extends Model
   #
   # If the given checkpoint is no longer present in the undo history, no
   # grouping will be performed and this method will return `false`.
+  # 
+  # * `checkpoint` A checkpoint value.
   #
   # Returns a {Boolean} indicating whether the operation succeeded.
   groupChangesSinceCheckpoint: (checkpoint) -> @buffer.groupChangesSinceCheckpoint(checkpoint)
